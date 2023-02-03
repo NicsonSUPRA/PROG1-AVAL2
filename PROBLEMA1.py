@@ -71,8 +71,6 @@ def main():
                     print(hashtag)
                     
 
-                print(answer)
-                print(hashtag)
             
             else:
                 print(len(lista[-1]))
@@ -81,6 +79,7 @@ def main():
         else:
             print('NAO')
             print(hashtag)
+            
 
 
         
