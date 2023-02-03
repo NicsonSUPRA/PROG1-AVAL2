@@ -69,7 +69,7 @@ def main():
                 if answer == 'NAO':
                     print('NAO')
                     print(hashtag)
-                    break
+                    
 
                 print(answer)
                 print(hashtag)
@@ -81,7 +81,6 @@ def main():
         else:
             print('NAO')
             print(hashtag)
-            break
 
 
         
