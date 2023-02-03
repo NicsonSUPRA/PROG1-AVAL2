@@ -4,37 +4,43 @@ from sys import stdin
 def verify_num(num):
     acumulador = 0
     contador = 1
+    
     while(acumulador <= num):
-        acumulador+=contador
-        contador+=1
+        acumulador += contador
+        contador += 1
+        
         if(acumulador == num):
             return True
+    
     return False
 
 
 def M_alternates(lista):
-    first_index=0
-    second_index=1
-    counting=2
-    listanova=list()
+    first_index = 0
+    second_index = 1
+    counting = 2
+    listanova = list()
+    
     while(second_index <= len(lista)):
         listanova.append(lista[first_index:second_index])
-        first_index=second_index
-        second_index+=counting
-        counting+=1
+        first_index = second_index
+        second_index += counting
+        counting += 1
+    
     return listanova
 
 
 def zero_um(first_element):
-    if(first_element%2==0):
-        resto=0
+    if(first_element%2 == 0):
+        resto = 0
     else:
-        resto=1
+        resto = 1
+    
     return resto
 
 
 def main():
-    num=None
+    num = None
     while(num != ''):
         num=stdin.readline().strip()
         lista=stdin.readline().strip().split()
@@ -54,13 +60,11 @@ def main():
                     
                     if(i%2==resto):
                         pass
-                    
                     else:
                         answer='NAO'
                 
                 if resto == 1:
-                    resto=0
-                
+                    resto=0               
                 else:
                     resto=1
             
@@ -68,20 +72,14 @@ def main():
                 
                 if answer == 'NAO':
                     print('NAO')
-                    print(hashtag)
-                    
-
-            
+                    print(hashtag)                      
             else:
                 print(len(lista[-1]))
                 print(hashtag)
-
         else:
             print('NAO')
             print(hashtag)
             
-
-
-        
+       
 if __name__=='__main__':
     main()
